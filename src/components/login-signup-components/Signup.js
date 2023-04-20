@@ -18,6 +18,17 @@ const Signup = () => {
 
   const auth = getAuth();
   const navigate = useNavigate();
+
+  const handleProductImg = (e)=>{
+    let selectedFile = e.target.files[0];
+    if(selectedFile){
+      setProfilepic(selectedFile)
+    }
+    else{
+      setErrorMsg('please select your profile pic')
+    }
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
@@ -31,7 +42,7 @@ const Signup = () => {
                 email,
                 password,
                 dob,
-                profimage: url,name
+                profimage: url,name,uid:user.uid
               })
                 .then(() => {
                   setSuccessMsg("user added successfully");
@@ -100,14 +111,14 @@ const Signup = () => {
             placeholder="Choose Date of Birth"
           />
           <input
-            onChange={(e) => setProfilepic(e.target.value)}
+            onChange={handleProductImg}
             type="file"
             accept="image/png,image/jpg,image/gif"
             placeholder="Choose a profile picture"
           />
           <input
             onChange={(e) => setPassword(e.target.value)}
-            typr="password"
+            type="password"
             placeholder="Enter your password"
           />
           <button onClick={handleSubmit}>Submit</button>
