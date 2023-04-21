@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 // import logo from "../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { signOut } from "firebase/auth";
-import { auth } from "../../firebase/FirebaseConfig";
+import { auth, db } from "../../firebase/FirebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const Navbar = (props) => {
   const navigate = useNavigate();
@@ -20,7 +21,22 @@ const Navbar = (props) => {
   };
   let curruser = props.userdata
   // let message_icon = "https://images.pexels.com/photos/16063640/pexels-photo-16063640.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+const [finduser,setFinduser] = useState("");
+const [finduserdoc,setFinduserdoc] = useState('');
 
+const searchuser = (e)=>{
+e.preventDefault();
+const getUser = async ()=>{
+  const q = query(collection(db,"users"),where("email","==",finduser));
+  const data = await getDocs(q)
+  setFinduserdoc(data.docs.map((doc)=>({...doc.data(),id:doc.id})));
+  // console.log(finduserdoc);
+  if(finduserdoc.length !==0){
+    navigate(`/searchedprofile/${finduserdoc[0].uid}`);
+  }
+}
+getUser();
+}
   return (
     <div>
       <nav>
@@ -28,6 +44,13 @@ const Navbar = (props) => {
           <h1>Emergency-SOS</h1>
           {/* <img src={logo} alt="" /> */}
         </div>
+        {curruser !== undefined ?
+         <div className="center">
+         <input placeholder="Search a helper by email" onChange={(e)=>setFinduser(e.target.value)} className="search-user" />
+         <button onClick={searchuser}>&gt;</button>
+          </div>
+         :
+         <div></div>}
      
         {curruser !== undefined ?
           <div className="right">

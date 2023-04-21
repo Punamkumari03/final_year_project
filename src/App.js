@@ -10,6 +10,8 @@ import Fof from "./components/Fof";
 import Userchats from "./components/userprofile-chat/Userchats";
 import Userprofile from "./components/userprofile-chat/Userprofile";
 import Addpost from "./components/post/Addpost";
+import Friendsprofile from "./components/friendsprofile/Friendsprofile";
+import Ptopmsg from "./components/Chat-components/Ptopmsg";
 
 function App() {
   const [user, setUser] = useState("");
@@ -63,6 +65,9 @@ function App() {
                 element={<Userprofile userdata={user} />}
               />
               <Route path="/addpost" element={<Addpost userdata={user}/>}/>
+              <Route path='/searchedprofile/:fuseruid' element={ <Friendsprofile userdata={user}/>} />
+              <Route path='/msgp2p/:fuseruid' element={ <Ptopmsg userdata={user}/>} />
+              
               <Route path="*" element={<Fof userdata={user} />} />
             </Routes>
           </BrowserRouter>

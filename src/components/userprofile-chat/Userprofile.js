@@ -51,7 +51,7 @@ const Userprofile = (props) => {
           <div className="userpost-head">
             <p>Your Posts</p>
           </div>
-          <div className="section2"></div>
+          <div className="section2">
           {posts.length > 0 ? (
             <>
               {posts.map((post) => (
@@ -62,6 +62,7 @@ const Userprofile = (props) => {
           ) : (
             <div className="big-head">No Post</div>
           )}
+        </div>
         </div>
       ) : (
         <div>

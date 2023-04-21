@@ -35,3 +35,13 @@ nav.right button:hover{
     border: none;
     border-top: 1px solid rgb(87, 22, 107);
 }
+.center{
+    display: flex;
+    width: 400px;
+}
+.search-user{
+    border: 2px solid #3b1c5c;
+    padding: 0px 10px;
+    border-radius: 10px;
+    width: 100%;
+}
