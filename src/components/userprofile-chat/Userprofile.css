@@ -26,3 +26,8 @@
     border-radius: 30px;
     margin-top: 50px;
 }
+.section2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

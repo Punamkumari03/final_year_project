@@ -9,6 +9,7 @@ import { collection, doc, getDoc, getDocs, query, where } from "firebase/firesto
 import Fof from "./components/Fof";
 import Userchats from "./components/userprofile-chat/Userchats";
 import Userprofile from "./components/userprofile-chat/Userprofile";
+import Addpost from "./components/post/Addpost";
 
 function App() {
   const [user, setUser] = useState("");
@@ -61,6 +62,7 @@ function App() {
                 path="/userprofile"
                 element={<Userprofile userdata={user} />}
               />
+              <Route path="/addpost" element={<Addpost userdata={user}/>}/>
               <Route path="*" element={<Fof userdata={user} />} />
             </Routes>
           </BrowserRouter>

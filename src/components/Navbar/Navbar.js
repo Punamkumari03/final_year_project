@@ -19,7 +19,7 @@ const Navbar = (props) => {
       });
   };
   let curruser = props.userdata
-  let message_icon = "https://images.pexels.com/photos/16063640/pexels-photo-16063640.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+  // let message_icon = "https://images.pexels.com/photos/16063640/pexels-photo-16063640.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
 
   return (
     <div>
@@ -29,15 +29,25 @@ const Navbar = (props) => {
           {/* <img src={logo} alt="" /> */}
         </div>
      
-        {curruser != undefined ?
+        {curruser !== undefined ?
           <div className="right">
-          <button onClick={logoutuser}>Logout</button>
+          <Link to="/mainpage">
+            <button>Home</button>
+          </Link>
           <Link to="/userchats">
             <button>chat</button>
           </Link>
+          <Link to="/addpost">
+            <button>+</button>
+          </Link>
+          <button onClick={logoutuser}>Logout</button>
+
+          
+          
           <Link to="/userprofile">
             <img src={curruser.profimage} className="nav-prifile-pic" alt="" />
           </Link>
+          
         </div>
         :
         <div className="right">
