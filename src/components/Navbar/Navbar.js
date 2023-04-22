@@ -27,7 +27,7 @@ const [finduserdoc,setFinduserdoc] = useState('');
 const searchuser = (e)=>{
 e.preventDefault();
 const getUser = async ()=>{
-  const q = query(collection(db,"users"),where("email","==",finduser));
+  const q = query(collection(db,"users"),where("name","==",finduser));
   const data = await getDocs(q)
   setFinduserdoc(data.docs.map((doc)=>({...doc.data(),id:doc.id})));
   // console.log(finduserdoc);
@@ -37,6 +37,7 @@ const getUser = async ()=>{
 }
 getUser();
 }
+
   return (
     <div>
       <nav>
@@ -46,7 +47,7 @@ getUser();
         </div>
         {curruser !== undefined ?
          <div className="center">
-         <input placeholder="Search a helper by email" onChange={(e)=>setFinduser(e.target.value)} className="search-user" />
+         <input placeholder="Search a helper by name" onChange={(e)=>setFinduser(e.target.value)} className="search-user" />
          <button onClick={searchuser}>&gt;</button>
           </div>
          :

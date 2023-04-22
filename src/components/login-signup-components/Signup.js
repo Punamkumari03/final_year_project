@@ -34,7 +34,7 @@ const Signup = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredentials) => {
         const user = userCredentials.user;
-        const storageRef = ref(storage, `profile-image/${Date.now}`);
+        const storageRef = ref(storage, `profile-image/${profilepic.name}`);
         uploadBytes(storageRef, profilepic)
           .then(() => {
             getDownloadURL(storageRef).then((url) => {
@@ -42,7 +42,9 @@ const Signup = () => {
                 email,
                 password,
                 dob,
-                profimage: url,name,uid:user.uid
+                profimage: url,
+                name,
+                uid:user.uid
               })
                 .then(() => {
                   setSuccessMsg("user added successfully");
@@ -78,6 +80,7 @@ const Signup = () => {
         }, 4000);
       });
   };
+  
 
   return (
     <div>
