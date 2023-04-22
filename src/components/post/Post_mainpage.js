@@ -15,7 +15,8 @@ const Post_mainpage = (props) => {
      <img className='pop' alt="" src={currpost.postpic}/>
      <hr/>
      <p><span>{currpost.name} &nbsp;</span>{currpost.description}</p>
-    </div>
+     <p><span>Location - </span>{currpost.location}</p>
+    </div> 
     
   )
 }

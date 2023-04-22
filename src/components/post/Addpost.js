@@ -19,6 +19,7 @@ const Addpost = (props) => {
   // let newdate= `${year}${month}${day}${hours}${mins}${seconds}`;
 
   const [description, setDescription] = useState();
+  const [location,setLocation] = useState();
   const [postpic, setPostpic] = useState();
   const [successMsg, setSuccessMsg] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
@@ -44,7 +45,7 @@ const Addpost = (props) => {
       getDownloadURL(storageRef).then((url) => {
         addDoc(collection(db, `posts`), {
           email: user.email,
-          description,
+          description,location,
           name: user.name,
           profilepic: user.profimage,
           postpic: url,
@@ -97,6 +98,10 @@ const Addpost = (props) => {
               <input
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Enter Description"
+              />
+                <input
+                onChange={(e) => setLocation(e.target.value)}
+                placeholder="Enter your location"
               />
               <button onClick={handleSubmit}>Submit</button>
             </form>
