@@ -1,0 +1,42 @@
+.postSec{
+    background-image: linear-gradient(rgba(0, 50, 200, 0.3),rgba(0, 60, 200, 0.3)),url('../assets/pic2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+.postSec{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    
+}
+.postHeading{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+.postHeading h3{
+    color: white;
+}
+.postHeading p{
+    color: white;
+    font-size: 40px;
+}
+.serviceApp li{
+    font-size: 20px;
+}
+.serviceApp a{
+    color: white;
+
+}
+.serviceApp button{
+    width: 90px;
+    border-radius: 33px;
+}
+.serviceApp button:hover{
+    border: 2px solid #3a3a3a;
+}
+.serviceApp a:hover{
+    color: #3a3a3a;
+}

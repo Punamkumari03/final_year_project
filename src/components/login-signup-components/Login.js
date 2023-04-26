@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import './login-signup.css'
 import { getAuth,signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
+import Footer from '../Footer/Footer'
 
 const Login = () => {
     const [email, setEmail] = useState();
@@ -48,7 +49,9 @@ const Login = () => {
     <div>
     <Navbar />
     <div className="form-outermost">
-      <h1>Login</h1>
+       <div className='logForm'>
+      <h2>Let's get in</h2>
+      <br />
       <form className="form-inner">
         {successMsg && (
           <>
@@ -70,9 +73,14 @@ const Login = () => {
           typr="password"
           placeholder="Enter your password"
         />
+        <br />
+        <br />
         <button onClick={handleSubmit}>Submit</button>
       </form>
+      </div>
     </div>
+
+    <Footer></Footer>
   </div>
   )
 }

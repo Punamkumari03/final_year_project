@@ -5,6 +5,7 @@ import { getAuth } from "firebase/auth";
 import { db, storage } from "../../firebase/FirebaseConfig";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { addDoc, collection } from "firebase/firestore";
+import Footer from "../Footer/Footer";
 
 const Addpost = (props) => {
   let curruser = props.userdata[0];
@@ -77,6 +78,7 @@ const Addpost = (props) => {
         <div>
           <Navbar userdata={curruser} />
           <div className="form-outermost">
+            <div className='logForm'>
             <h1>Add post</h1>
             <form className="form-inner">
               {successMsg && (
@@ -105,7 +107,9 @@ const Addpost = (props) => {
               />
               <button onClick={handleSubmit}>Submit</button>
             </form>
+            </div>
           </div>
+          <Footer></Footer>
         </div>
       ) : (
         <div>

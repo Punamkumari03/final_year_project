@@ -1,5 +1,5 @@
 .post-mainpage{
-    width: 400px;
+    width: 343px;
     border: 1px solid #3b1c5c;
     margin:10px;
     border-radius: 10px;
@@ -43,4 +43,37 @@ font-weight: 300;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.mainpage-outer{
+    display: flex;
+}
+.app_post{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.postSec{
+    background-image: linear-gradient(rgba(0, 50, 200, 0.3),rgba(0, 60, 200, 0.3)),url('./assets/pic2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+.postSec{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    
+}
+.postHeading{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+.postHeading h3{
+    color: white;
+}
+.postHeading p{
+    color: white;
+    font-size: 40px;
 }

@@ -1,0 +1,29 @@
+.postSec{
+    background-image: linear-gradient(rgba(0, 50, 200, 0.3),rgba(0, 60, 200, 0.3)),url('../assets/images.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+.postSec{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    
+}
+.postHeading{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+.postHeading h3{
+    color: white;
+}
+.postHeading p{
+    color: white;
+    font-size: 40px;
+}
+.aboutImg img{
+    height: 100vh;
+    
+}

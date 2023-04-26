@@ -12,6 +12,9 @@ import Userprofile from "./components/userprofile-chat/Userprofile";
 import Addpost from "./components/post/Addpost";
 import Friendsprofile from "./components/friendsprofile/Friendsprofile";
 import Ptopmsg from "./components/Chat-components/Ptopmsg";
+import Services from "./components/Features/Services";
+import About from "./components/About/About";
+
 
 function App() {
   const [user, setUser] = useState("");
@@ -54,6 +57,8 @@ function App() {
             <Routes>
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/services" element={<Services/>}/>
+              <Route path="/about" element={<About/>}/>
               <Route path="/mainpage" element={<Mainpage userdata={user} />} />
               <Route path="/mainpage" element={<Mainpage userdata={user} />} />
               <Route
@@ -78,6 +83,7 @@ function App() {
             <Routes>
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/about" element={<About/>}/>
               <Route path="*" element={<Fof />} />
             </Routes>
           </BrowserRouter>

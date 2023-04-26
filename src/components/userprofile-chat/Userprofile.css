@@ -31,3 +31,22 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.profileSec{
+    display: flex;
+}
+.profileData{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profileDp{
+    width:180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.profileText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

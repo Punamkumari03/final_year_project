@@ -6,19 +6,27 @@
     background-color: #fff;
     align-items: center;
 }
-.form-outermost h1{
+.form-outermost .logForm h2{
 font-size: 50px;
 padding: 20px;
+font-weight: 400;
+}
+.logForm{
+    box-shadow:0 0 15px 5px rgba(0,0,0,0.2) ;
+    height: 70vh;
+    opacity: 1;
 }
 form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 3px solid #3b1c5c;
+    /* border: 3px solid #3b1c5c; */
     padding: 10px;
     border-radius: 10px;
+
 }
+
 form input{
     width: 350px;
     padding: 10px;
@@ -36,4 +44,31 @@ form input:focus{
 form button{
     color: #ffffff;
     border: 1px solid #3b1c5c;
+    width: 90px;
+    border-radius: 16px;
+}
+.form-outermost{
+    background:linear-gradient(to right, #393c40 0% ,#3a3861 0%, #dcc6eb 100%);
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 50, 200, 0.3),rgba(0, 60, 200, 0.3)),url('../assets/pic2.jpg');
+    background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+    
+
+
+}
+
+.logForm{
+    box-shadow:0 0 15px 5px rgba(0,0,0,0.2) ;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    
 }

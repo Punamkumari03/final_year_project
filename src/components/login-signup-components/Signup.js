@@ -6,6 +6,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { addDoc, collection } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import './login-signup.css'
+import Footer from "../Footer/Footer";
 const Signup = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -86,7 +87,8 @@ const Signup = () => {
     <div>
       <Navbar />
       <div className="form-outermost">
-        <h1>Signup</h1>
+      <div className='logForm' style={{height:'80vh'}}>
+        <h2>Be a helping hand</h2>
         <form className="form-inner">
           {successMsg && (
             <>
@@ -126,7 +128,10 @@ const Signup = () => {
           />
           <button onClick={handleSubmit}>Submit</button>
         </form>
+        </div>
       </div>
+
+      <Footer></Footer>
     </div>
   );
 };

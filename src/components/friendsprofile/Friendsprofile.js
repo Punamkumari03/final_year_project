@@ -93,17 +93,21 @@ const Friendsprofile = (props) => {
       {user ? (
         <div>
           <Navbar userdata={loggeduser} />
-          <div className="section1">
-            <div className="left">
+          <br/>
+          <br/>
+          <div className="profileSec container">
+            <div className="profileData col-lg-3 col-md-6 col-12 d-flex flex-column">
+            <br/>
               <img
                 src={curruser.profimage}
-                className="userprofile-image"
-                alt=""
+                alt='dp'
+                className="profileDp"
+                
               />
             </div>
-            <div className="right">
-              <h1>{curruser.name}</h1>
-              <h1>{curruser.email}</h1>
+            <div className="profileText">
+              <p>{curruser.name}</p>
+              <p>{curruser.email}</p>
             </div>
             {loggeduser.uid !== curruser.uid ? (
               <Link to={`/msgp2p/${curruser.uid}`}>
@@ -116,8 +120,8 @@ const Friendsprofile = (props) => {
               <></>
             )}
           </div>
-          <div className="userpost-head">
-            <p>{curruser.name}'s posts</p>
+          <div className="profilePost col-lg-8 col-md-6 col-12">
+            <h4 style={{marginLeft:'50px'}}>{curruser.name}'s posts</h4>
           </div>
           <div className="section2">
             {posts.length > 0 ? (

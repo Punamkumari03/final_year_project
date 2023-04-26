@@ -4,6 +4,7 @@ import './Userchats.css'
 import { collection, getDocs, query } from 'firebase/firestore'
 import { db } from '../../firebase/FirebaseConfig'
 import { Link } from 'react-router-dom'
+import Footer from '../Footer/Footer'
 
 const Userchats = (props) => {
   let loggeduser = props.userdata[0]
@@ -28,7 +29,9 @@ const Userchats = (props) => {
       {props ? <div>
       
       <Navbar userdata={loggeduser}/>
-      <div className='big-head-1'>Userchats</div>
+      {/* <div className='big-head-1'>Userchats</div> */}
+      <div className='chatMain'>
+
       <div className='chat-list'>
         {chats.length>0?<>
 {chats.map((chat)=>(
@@ -36,18 +39,27 @@ const Userchats = (props) => {
     <div className='chat-single'>
       <img src={chat.fprofpic} alt="" className='nav-profile-pic'/>
       <p>{chat.fusername}</p>
+
     </div>
   </Link>
-))}
+ 
+))
+}
+
         </>:
         <div> No chats</div>}
       </div>
+
+      </div>
+      <Footer/>
       </div>:
       <div>
         <Navbar />
         <div>you are not Logged in</div>
       </div>
+      
       }
+      
     </div>
   )
 }

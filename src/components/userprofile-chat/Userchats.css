@@ -7,17 +7,25 @@
     border-radius: 10px;
     padding: 10px;
     width: 700px;
+    box-shadow:0 0 15px 5px rgba(0,0,0,0.2) ;
 }
 .chat-single p{
     font-weight: 700;
     font-size: 22px;
 }
 .chat-list{
+    justify-content: center;
+    text-align: center;
     display: flex;
     margin: auto;
     width: 700px;
     padding: 10px;
+    flex-direction: column;
+   
 }
 .big-head-1 p{
     border-bottom: 2px solid #ffbb00;
+}
+.chatMain{
+    height: 90vh;
 }

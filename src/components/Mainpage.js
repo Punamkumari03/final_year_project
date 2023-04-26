@@ -4,6 +4,8 @@ import './Mainpage.css'
 import { collection, doc, getDocs, query } from "firebase/firestore";
 import { db } from "../firebase/FirebaseConfig";
 import Post_mainpage from "./post/Post_mainpage";
+import Footer from './Footer/Footer';
+import helpingHands from './assets/helpingHands.jpg';
 
 const Mainpage = (props) => {
   let curruser = props.userdata[0];
@@ -38,14 +40,31 @@ const Mainpage = (props) => {
       {props ? (
         <div>
           <Navbar userdata={curruser} />
+          {/* <br /> */}
+          <div className="postSec">
+                <div className="postHeading col-lg-4 col-md-6 col-12">
+                      <h3>Take a step forward...</h3>
+                      <p>Your small favor can save someone's life.</p>
+                </div>
+          </div>
           <div className="mainpage-outer">
+            <br />
+            <h2>Recent Posts</h2>
+            <br />
           {posts.length>0 ? <div>
+          <div className='app_post'>
           {posts.map((post) => (
             <Post_mainpage key={post.id} postdata={post} />
           ))}
+          </div>
             </div>:
             <div className="big-head">Try refreshing the page ..</div>}
         </div>
+
+        <br />
+        <br />
+
+        <Footer></Footer>
         </div>
       ) : (
         <div>

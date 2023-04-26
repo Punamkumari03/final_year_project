@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { addDoc, collection, doc, getDoc, getDocs, orderBy, query, where } from 'firebase/firestore';
 import { db } from '../../firebase/FirebaseConfig';
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 const Ptopmsg = (props) => {
     const loggeduser = props.userdata[0];
@@ -78,6 +79,9 @@ const sendmsg = (e) =>{
      {curruser? 
      <div>
         <Navbar userdata={loggeduser} />
+        <div className='p2p-section'> 
+        
+        </div>
         <div className='p2p'>
         <div className='p2p-section-1'>
             <img className='nav-profile-pic' src={curruser.profimage} alt="" />
@@ -107,6 +111,7 @@ const sendmsg = (e) =>{
            <input value={typedmsg} onChange={(e)=>{ setTypedmsg(e.target.value)}} />
            <button onClick={sendmsg}>Send</button>
            </div></div>
+           <Footer/>
 
      </div>
      :
