@@ -4,6 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import { db } from "../../firebase/FirebaseConfig";
 import Navbar from "../Navbar/Navbar";
 import PostProfile from "../post/PostProfile";
+import Footer from "../Footer/Footer";
+
 
 const Friendsprofile = (props) => {
   const { fuseruid } = useParams();
@@ -95,51 +97,68 @@ const Friendsprofile = (props) => {
           <Navbar userdata={loggeduser} />
           <br/>
           <br/>
+
           <div className="profileSec container">
             <div className="profileData col-lg-3 col-md-6 col-12 d-flex flex-column">
-            <br/>
+              <br/>
               <img
                 src={curruser.profimage}
                 alt='dp'
                 className="profileDp"
                 
               />
-            </div>
-            <div className="profileText">
+              <div className="profileText">
               <p>{curruser.name}</p>
               <p>{curruser.email}</p>
-            </div>
-            {loggeduser.uid !== curruser.uid ? (
+              </div>
+
+
+              {loggeduser.uid !== curruser.uid ? (
               <Link to={`/msgp2p/${curruser.uid}`}>
                 {" "}
                 <button className="msg-btn-profile" onClick={addtouserchats}>
-                  message
+                  Message
                 </button>
               </Link>
             ) : (
               <></>
             )}
-          </div>
+
+            
+
+            </div>
+           
+            
+          
           <div className="profilePost col-lg-8 col-md-6 col-12">
-            <h4 style={{marginLeft:'50px'}}>{curruser.name}'s posts</h4>
-          </div>
-          <div className="section2">
-            {posts.length > 0 ? (
-              <>
-                {posts.map((post) => (
-                  <PostProfile key={post.id} postdata={post} />
-                ))}
-              </>
-            ) : (
-              <div className="big-head">No Post</div>
-            )}
-          </div>
+              <h4 style={{marginLeft:'50px'}}>{curruser.name}'s posts</h4>
+        
+              <div className="section2">
+                {posts.length > 0 ? (
+                  <>
+                    {posts.map((post) => (
+                      <PostProfile key={post.id} postdata={post} />
+                    ))}
+                  </>
+                ) : (
+                  <div className="big-head">No Post</div>
+                )}
+              </div>
+            </div>
         </div>
+        <br />
+        <br />
+        <br />
+        <Footer></Footer>
+      </div>
       ) : (
         <div>
           <Navbar />
           <div className="big-head">Loading...</div>
+          <br />
+          <Footer></Footer>
         </div>
+        
       )}
     </div>
   );

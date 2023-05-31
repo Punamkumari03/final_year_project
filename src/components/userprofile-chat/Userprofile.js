@@ -56,6 +56,7 @@ const Userprofile = (props) => {
             </div>
             <div className="profilePost col-lg-8 col-md-6 col-12">
                       <h4 style={{marginLeft:'50px'}}>Your Posts</h4>
+                      
                         <div className="section2">
                       {posts.length > 0 ? (
                         <>
@@ -68,6 +69,8 @@ const Userprofile = (props) => {
                         <div className="big-head">No Post</div>
                       )}
                     </div>
+
+                    
                  
             </div>
       </div>

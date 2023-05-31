@@ -14,9 +14,15 @@ import punam from '../components/assets/Punam.jpeg';
 import kashish from '../components/assets/Kashish.jpg';
 import anand from '../components/assets/anand.jpeg'
 import kushaal from '../components/assets/kushaal.jpeg'
+import ranjan from '../components/assets/ranjan'
+import rahul from '../components/assets/Rahul'
+import raja from '../components/assets/Raja'
+import priyanka from '../components/assets/priyanka'
+import manish from '../components/assets/Manish'
 import a5 from '../components/assets/a5.jpeg'
 import a1 from '../components/assets/a1.jpg'
 import a2 from '../components/assets/a2.jpg'
+import a3 from '../components/assets/a3.jpg'
 import post3 from '../components/assets/post3.jpeg';
 import post4 from '../components/assets/post4.jpeg';
 import Footer from './Footer/Footer';
@@ -87,6 +93,42 @@ const Fof = () => {
 
 {/* **********************************Cards Section ends *******************--> */}
 
+{/************************************meet our volunteer start here ********************** */}
+
+<section class="section-2 container-fluid p-0">
+            <div class="cover">
+                <div class="content text-center">
+                    <h1>Most Recently  Active Helpers</h1>
+                    <p>If you want urgent help then you can directly search their name </p>
+                </div>
+            </div>
+            <div class="container-fluid text-center">
+                <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+                    <div class="rect">
+                        <img className='client' src={priyanka} alt='' />
+                        <p>Priyanka kumari</p>
+                    </div>
+                    <div class="rect">
+                    <img className='client' src={manish} alt='' />
+                        <p>Anand Shukla</p>
+                    </div>
+                    <div class="rect">
+                    <img className='client' src={raja} alt='' />
+                    
+                        <p>Raja Kumar</p>
+                    </div>
+                    <div class="rect">
+                    <img className='client' src={ranjan} alt='' />
+                        <p>Ranjan Kumar</p>
+                    </div>
+                </div>
+            </div>
+</section>
+{/*************************************meet our volunteer end  here **************************/}
+
+<br />
+<br />
+
 {/* **********************************Recents Posts  starts here**************************** */}
 <div className='homePosts' class="container">
        <div className='postHeading'>
@@ -111,16 +153,16 @@ const Fof = () => {
                   
                     <div className='post-mainpage' class='col-lg-3 col-md-6 col-12' style={{margin:'20px',padding:'20px'}}>
                             <div className='section-row'>
-                                <img className='prp' alt="" src={kushaal}/>
+                                <img className='prp' alt="" src={saumya}/>
                                 <div className='section-col'>
                                   <h1 style={{marginLeft:'10px'}}>Kushaal Singh</h1>
                                 </div>
                             </div>
                           
-                            <img className='pop' alt="" src={a1}/>
+                            <img className='pop' alt="" src={a3}/>
                         
-                            <p><span>Kushaal&nbsp;</span> Urgent need of O+ blood</p>
-                            <p><span>Location - </span>alpha 1 greater noida</p>
+                            <p><span>Kushal&nbsp;</span> need O-positive blood</p>
+                            <p><span>Location - </span>Beta-1 greater noida</p>
                       </div> 
 
                       <div className='post-mainpage' class='col-lg-3 col-md-6 col-12' style={{margin:'20px',padding:'20px'}}>
@@ -194,22 +236,22 @@ const Fof = () => {
                                 <div className="col-md-3 text-center">
                                   <div className="profile">
                                       <img src={punam} alt=""className="user"/>
-                                    <p>The history of the labor movement needs to be taught in every school in this land. America is a living testimonial to what free men and women, organized in free democratic trade unions can do to make a better life. We ought to be proud of it!</p>
-                                      <h3>punam Gupta </h3>
+                                    <p>“ From my personal experiment I can say that Thanks to God, My family and the donations of each and every person that appeared in my moments of need I was allowed to keep living. Today I can say that thanks to the generosity of others...”</p>
+                                      <h3>Punam Gupta </h3>
                                   </div>
                                 </div>
                                 <div className="col-md-3 text-center">
                                   <div className="profile">
                                       <img src={saumya} alt=""className="user"/>
-                                      <p>The history of the labor movement needs to be taught in every school in this land. America is a living testimonial to what free men and women, organized in free democratic trade unions can do to make a better life. We ought to be proud of it!</p>
-                                      <h3>punam Gupta </h3>
+                                      <p>“ The importance of donating blood. I wanted to transmit, the value to society of all the men and women that selflessly and voluntarily go to the blood banks donate a little life to those that are going though delicate moments of their lives ”</p>
+                                      <h3>Saumya Jaiswal </h3>
                                   </div>
                                 </div>
                                 <div className="col-md-3 text-center">
                                   <div className="profile">
                                       <img src={kashish} alt=""className="user"/>
-                                    <p>The history of the labor movement needs to be taught in every school in this land. America is a living testimonial to what free men and women, organized in free democratic trade unions can do to make a better life. We ought to be proud of it!</p>
-                                      <h3>punam Gupta</h3>
+                                    <p>“ Every year, we have two or three blood donating events with very good results and we are among the institutions with the largest group of permanent voluntary blood donors of the country ”</p>
+                                      <h3>Kashish Jain</h3>
                                   </div>
                                 </div>                          
                           </div>
@@ -218,23 +260,23 @@ const Fof = () => {
                               <div className="row testCenter">
                                     <div className="col-md-3 text-center">
                                       <div className="profile">
-                                          <img src={kashish} alt=""className="user"/>
-                                        <p>The history of the labor movement needs to be taught in every school in this land. America is a living testimonial to what free men and women, organized in free democratic trade unions can do to make a better life. We ought to be proud of it!</p>
-                                          <h3>punam Gupta <span>Co-Founder at XYX</span></h3>
+                                          <img src={priyanka} alt=""className="user"/>
+                                        <p>“ I am a voluntary donor, and after every donation I feel joy and the satisfaction of having accomplished my duty. I have the luck of being healthy never having gotten any transmissible illness, for which I recommend every person that has similar conditions to proceed in a similar manner ”</p>
+                                          <h3>Priyanka Kumari</h3>
                                       </div>
                                     </div>
                                     <div className="col-md-3 text-center">
                                       <div className="profile">
-                                          <img src="https://images.pexels.com/photos/7090350/pexels-photo-7090350.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""className="user"/>
-                                          <p>The history of the labor movement needs to be taught in every school in this land. America is a living testimonial to what free men and women, organized in free democratic trade unions can do to make a better life. We ought to be proud of it!</p>
-                                          <h3>punam Gupta <span>Co-Founder at XYX</span></h3>
+                                          <img src={raja} alt=""className="user"/>
+                                          <p>“ TI think that all human being have to make a solidary commitment, take conscience of how valuable a little of our blood could be for another human being, and be of help because it really isn't that much effort, we need to support one and other ...”</p>
+                                          <h3>Raja Gupta</h3>
                                       </div>
                                     </div>
                                     <div className="col-md-3 text-center">
                                       <div className="profile">
-                                          <img src="https://images.pexels.com/photos/7090350/pexels-photo-7090350.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""className="user"/>
-                                        <p>The history of the labor movement needs to be taught in every school in this land. America is a living testimonial to what free men and women, organized in free democratic trade unions can do to make a better life. We ought to be proud of it!</p>
-                                          <h3>punam Gupta <span>Co-Founder at XYX</span></h3>
+                                          <img src={ranjan}alt=""className="user"/>
+                                        <p>“ Thank you for being a part of my life, thank you for giving me hope, for giving me the opportunity to keep enjoying, to know my grand children, to see the true value of life; thank you, simply thank you, because through your donation you gave me life ”</p>
+                                          <h3>Ranjan Kumar</h3>
                                       </div>
                                     </div>
                                 </div>
@@ -243,23 +285,24 @@ const Fof = () => {
                       <div className="row testCenter">
                             <div className="col-md-3 text-center">
                               <div className="profile">
-                                  <img src="https://images.pexels.com/photos/7090350/pexels-photo-7090350.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""className="user"/>
-                                <p>The history of the labor movement needs to be taught in every school in this land. America is a living testimonial to what free men and women, organized in free democratic trade unions can do to make a better life. We ought to be proud of it!</p>
-                                  <h3>punam Gupta <span>Co-Founder at XYX</span></h3>
+                                  <img src={kushaal} alt=""className="user"/>
+                                <p>“ The history of the labor movement needs to be taught in every school in this land. America is a living testimonial to what free men and women, organized in free democratic trade unions can do to make a better life. We ought to be proud of it ”</p>
+                                  <h3>Kushaal Singh</h3>
                               </div>
                             </div>
                             <div className="col-md-3 text-center">
                               <div className="profile">
-                                  <img src="https://images.pexels.com/photos/7090350/pexels-photo-7090350.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""className="user"/>
-                                  <p>The history of the labor movement needs to be taught in every school in this land. America is a living testimonial to what free men and women, organized in free democratic trade unions can do to make a better life. We ought to be proud of it!</p>
-                                  <h3>punam Gupta <span>Co-Founder at XYX</span></h3>
+                                  <img src={rahul} alt=""className="user"/>
+                                  <p>“It is always a pleasure to work with BMST for blood donation camp.Would like to hold more such camp.Team is quite professional and handles the events themselves.Nice Work.”</p>
+                                  <h3>Rahul Tomer</h3>
                               </div>
                             </div>
                             <div className="col-md-3 text-center">
                               <div className="profile">
-                                  <img src="https://images.pexels.com/photos/7090350/pexels-photo-7090350.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""className="user"/>
-                                <p>The history of the labor movement needs to be taught in every school in this land. America is a living testimonial to what free men and women, organized in free democratic trade unions can do to make a better life. We ought to be proud of it!</p>
-                                  <h3>punam Gupta <span>Co-Founder at XYX</span></h3>
+                                  <img src={manish} alt=""className="user"/>
+                                <p>“The staff was friendly, polite and courteous. It’s high time youngsters like me has to donate blood. Bengaluru citizens please donate blood. You will be helping the people who are suffering from dengue, etc,. Donate blood to save lives.”
+</p>
+                                  <h3>Manish Gupta</h3>
                               </div>
                             </div>
                           </div>

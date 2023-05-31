@@ -70,7 +70,7 @@ const Login = () => {
         />
         <input
           onChange={(e) => setPassword(e.target.value)}
-          typr="password"
+          type="password"
           placeholder="Enter your password"
         />
         <br />
